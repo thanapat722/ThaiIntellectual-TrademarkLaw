@@ -217,7 +217,8 @@ html {
 }
 
 .bottom-content .name .divider {
-  height: 250px;
+  height: 200px;
   background-color: white;
-  min-width: 1px;
+  width: 2px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
