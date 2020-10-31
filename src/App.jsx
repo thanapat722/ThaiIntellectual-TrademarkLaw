@@ -1,14 +1,15 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import './App.css';
 
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
 
 function App() {
+  // eslint-disable-next-line
   const [position, setPosition] = useState(0);
   const topRef = useRef(null);
   const midRef = useRef(null);
   const botRef = useRef(null);
-  const pdfURL = "https://www.example.com/test.pdf"
+  // const pdfURL = "https://www.example.com/test.pdf"
 
   function executeScroll(pos) {
     if (pos === 0) scrollToRef(topRef);
@@ -23,9 +24,9 @@ function App() {
           <div className="title">เครื่องหมายการค้า</div>
           <div className="links">
             {/* style={position === 0 ? { color: "rgb(0, 81, 187)" } : null} */}
-            <a onClick={() => { setPosition(0); executeScroll(0) }}>แนะนำ</a>
-            <a onClick={() => { setPosition(1); executeScroll(1) }}>เนื้อหา</a>
-            <a onClick={() => { setPosition(2); executeScroll(2) }}>ผู้จัดทำ</a>
+            <a href="/#" onClick={() => { setPosition(0); executeScroll(0) }}>แนะนำ</a>
+            <a href="/#" onClick={() => { setPosition(1); executeScroll(1) }}>เนื้อหา</a>
+            <a href="/#" onClick={() => { setPosition(2); executeScroll(2) }}>ผู้จัดทำ</a>
           </div>
         </div>
       </div>
@@ -40,7 +41,7 @@ function App() {
         <div className="mid-content">
           <h1 style={{ fontSize: "36px" }}>อ่าน</h1>
           {/* <iframe className="book" src={"https://drive.google.com/viewerng/viewer?url=" + pdfURL + "&embedded=true"} width="400px" height="300px" /> */}
-          <iframe className="book" src="https://drive.google.com/file/d/1_RVHBlmiYi4yj0XdZRswYdyhaG_RFQ6m/preview" />
+          <iframe className="book" title="book" src="https://drive.google.com/file/d/1_RVHBlmiYi4yj0XdZRswYdyhaG_RFQ6m/preview" />
         </div>
       </div>
       <div className="bottom" ref={botRef}>
