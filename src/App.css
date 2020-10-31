@@ -1,38 +1,218 @@
+@font-face {
+  font-family: Anuphan;
+  src: url(./assets/fonts/Anuphan-Regular.otf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Anuphan;
+  src: url(./assets/fonts/Anuphan-Light.otf);
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: Anuphan;
+  src: url(./assets/fonts/Anuphan-Bold.otf);
+  font-weight: bold;
+}
+
 .App {
   text-align: center;
+  font-family: Anuphan, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*::-webkit-scrollbar {
+  width: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+* {
+  margin: 0;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+  supported by Chrome, Opera and Firefox */
+}
+
+.navbar {
+  width: 100vw;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.72);
+  height: 60px;
+  backdrop-filter: blur(7px) saturate(200%);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-content {
+  height: inherit;
+  margin: auto;
+  width: 80vw;
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+
+.navbar-content .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar-content .links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: black;
+  transition: all ease-in-out 150ms;
+  cursor: pointer;
+}
+
+.navbar-content .links a:hover {
+  color: rgb(26, 120, 241);
+}
+
+.top {
+  display: flex;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url(./assets/images/cover.jpg);
+  font-weight: bold;
+}
+
+.top-content {
+  width: 80vw;
+  margin: auto;
+  text-align: start;
+  color: white;
+}
+.top-content h1 {
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.mid {
+  display: flex;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+}
+
+.mid-content {
+  width: 80vw;
+  margin: auto;
+  text-align: start;
+  color: rgb(37, 37, 37);
+}
+
+.mid-content .book {
+  background-color: rgb(190, 190, 190);
+  width: 100%;
+  height: 75vh;
+  border-radius: 5px;
+}
+
+.bottom {
+  display: flex;
+  height: 100vh;
+  background-attachment: fixed;
+  background-image: repeating-linear-gradient(
+      377deg,
+      hsla(210, 79%, 75%, 0.05) 0px,
+      hsla(210, 79%, 75%, 0.05) 1px,
+      transparent 1px,
+      transparent 11px,
+      hsla(210, 79%, 75%, 0.05) 11px,
+      hsla(210, 79%, 75%, 0.05) 12px,
+      transparent 12px,
+      transparent 32px
+    ),
+    repeating-linear-gradient(
+      287deg,
+      hsla(210, 79%, 75%, 0.05) 0px,
+      hsla(210, 79%, 75%, 0.05) 1px,
+      transparent 1px,
+      transparent 11px,
+      hsla(210, 79%, 75%, 0.05) 11px,
+      hsla(210, 79%, 75%, 0.05) 12px,
+      transparent 12px,
+      transparent 32px
+    ),
+    repeating-linear-gradient(
+      332deg,
+      hsla(210, 79%, 75%, 0.05) 0px,
+      hsla(210, 79%, 75%, 0.05) 1px,
+      transparent 1px,
+      transparent 11px,
+      hsla(210, 79%, 75%, 0.05) 11px,
+      hsla(210, 79%, 75%, 0.05) 12px,
+      transparent 12px,
+      transparent 32px
+    ),
+    repeating-linear-gradient(
+      242deg,
+      hsla(210, 79%, 75%, 0.05) 0px,
+      hsla(210, 79%, 75%, 0.05) 1px,
+      transparent 1px,
+      transparent 11px,
+      hsla(210, 79%, 75%, 0.05) 11px,
+      hsla(210, 79%, 75%, 0.05) 12px,
+      transparent 12px,
+      transparent 32px
+    ),
+    linear-gradient(332deg, rgb(70, 153, 172), rgb(23, 34, 87));
+}
+
+.bottom-content {
+  width: 80vw;
+  margin: auto;
+  text-align: start;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.bottom-content h1 {
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bottom-content .name {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.bottom-content .name li {
+  font-size: 24px;
+  margin: 0.5rem 0;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.bottom-content .name .divider {
+  height: 250px;
+  background-color: white;
+  min-width: 1px;
 }
