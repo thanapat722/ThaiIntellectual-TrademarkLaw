@@ -83,15 +83,20 @@ html {
   font-weight: bold;
 }
 
-.navbar-content .links a {
-  margin: 0 15px;
+.navbar-content .links button {
+  outline: none;
+  border: none;
+  background: transparent;
+  margin: 0 10px;
   text-decoration: none;
   color: black;
   transition: all ease-in-out 150ms;
   cursor: pointer;
+  font-family: inherit;
+  font-size: 18px;
 }
 
-.navbar-content .links a:hover {
+.navbar-content .links button:hover {
   color: rgb(26, 120, 241);
 }
 

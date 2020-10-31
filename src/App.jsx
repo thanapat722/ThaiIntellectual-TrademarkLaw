@@ -24,9 +24,9 @@ function App() {
           <div className="title">เครื่องหมายการค้า</div>
           <div className="links">
             {/* style={position === 0 ? { color: "rgb(0, 81, 187)" } : null} */}
-            <a href="/#" onClick={() => { setPosition(0); executeScroll(0) }}>แนะนำ</a>
-            <a href="/#" onClick={() => { setPosition(1); executeScroll(1) }}>เนื้อหา</a>
-            <a href="/#" onClick={() => { setPosition(2); executeScroll(2) }}>ผู้จัดทำ</a>
+            <button onClick={() => { setPosition(0); executeScroll(0) }}>แนะนำ</button>
+            <button onClick={() => { setPosition(1); executeScroll(1) }}>เนื้อหา</button>
+            <button onClick={() => { setPosition(2); executeScroll(2) }}>ผู้จัดทำ</button>
           </div>
         </div>
       </div>
