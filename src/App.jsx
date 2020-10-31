@@ -20,7 +20,7 @@ function App() {
     <div className="App">
       <div className="navbar noselect">
         <div className="navbar-content">
-          <div className="title"> พ.ร.บ. เครื่องหมายการค้า</div>
+          <div className="title">เครื่องหมายการค้า</div>
           <div className="links">
             {/* style={position === 0 ? { color: "rgb(0, 81, 187)" } : null} */}
             <a onClick={() => { setPosition(0); executeScroll(0) }}>แนะนำ</a>
