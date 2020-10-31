@@ -4,8 +4,6 @@ import './App.css';
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
 
 function App() {
-  // eslint-disable-next-line
-  const [position, setPosition] = useState(0);
   const topRef = useRef(null);
   const midRef = useRef(null);
   const botRef = useRef(null);
@@ -23,10 +21,9 @@ function App() {
         <div className="navbar-content">
           <div className="title">เครื่องหมายการค้า</div>
           <div className="links">
-            {/* style={position === 0 ? { color: "rgb(0, 81, 187)" } : null} */}
-            <button onClick={() => { setPosition(0); executeScroll(0) }}>แนะนำ</button>
-            <button onClick={() => { setPosition(1); executeScroll(1) }}>เนื้อหา</button>
-            <button onClick={() => { setPosition(2); executeScroll(2) }}>ผู้จัดทำ</button>
+            <button onClick={() => executeScroll(0)}>แนะนำ</button>
+            <button onClick={() => executeScroll(1)}>เนื้อหา</button>
+            <button onClick={() => executeScroll(2)}>ผู้จัดทำ</button>
           </div>
         </div>
       </div>
@@ -35,11 +32,12 @@ function App() {
           <h1 style={{ fontSize: "36px" }}>พระราชบัญญัติ</h1>
           <h1 style={{ fontSize: "70px" }}>เครื่องหมายการค้า พ.ศ.2534</h1>
           <h1>กฎหมายทรัพย์สินทางปัญญาไทย</h1>
+          <button onClick={() => executeScroll(1)}>อ่าน&nbsp;&nbsp;→</button>
         </div>
       </div>
       <div className="mid" ref={midRef}>
         <div className="mid-content">
-          <h1 style={{ fontSize: "36px" }}>อ่าน</h1>
+          {/* <h1 style={{ fontSize: "36px" }}>อ่าน</h1> */}
           {/* <iframe className="book" src={"https://drive.google.com/viewerng/viewer?url=" + pdfURL + "&embedded=true"} width="400px" height="300px" /> */}
           <iframe className="book" title="book" src="https://drive.google.com/file/d/1_RVHBlmiYi4yj0XdZRswYdyhaG_RFQ6m/preview" />
         </div>
