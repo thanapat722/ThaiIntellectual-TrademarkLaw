@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
 import './App.css';
 
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
