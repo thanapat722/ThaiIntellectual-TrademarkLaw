@@ -18,8 +18,8 @@
 
 .App {
   text-align: center;
-  font-family: Anuphan, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: Anuphan, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
 }
 
@@ -121,6 +121,18 @@ html {
 
 .top-content h1 {
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.text-top {
+  font-size: 36px;
+}
+
+.text-mid {
+  font-size: 70px;
+}
+
+.text-bot {
+  font-size: 32px;
 }
 
 .top-content button {
@@ -255,6 +267,27 @@ html {
   color: white;
 }
 
+.name-title {
+  font-size: 38px;
+  margin-bottom: 1rem;
+}
+
+.teacher-title {
+  font-size: 38px;
+  margin-bottom: 1rem 0;
+}
+
+.teacher-name {
+  font-size: 24px;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.subject-text {
+  font-size: 18px;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  margin-top: 2rem;
+}
+
 .bottom-content h1 {
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
@@ -264,6 +297,7 @@ html {
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-around;
+  margin-bottom: 2rem;
 }
 
 .bottom-content .name li {
@@ -277,4 +311,84 @@ html {
   background-color: white;
   width: 2px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive zone */
+@media only screen and (max-width: 953px) {
+  .bottom-content .name .divider {
+    display: none;
+  }
+
+  .bottom-content .name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 2rem;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .text-top {
+    font-size: 20px;
+  }
+
+  .text-mid {
+    font-size: 40px;
+  }
+
+  .text-bot {
+    font-size: 20px;
+  }
+
+  .name-title,
+  .teacher-title {
+    font-size: 26px;
+  }
+
+  .bottom-content .name li,
+  .teacher-name,
+  .subject-text {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .navbar {
+    padding: 0.5rem 0;
+  }
+
+  .navbar-content {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .bottom-content .name {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .text-top {
+    font-size: 16px;
+  }
+
+  .text-mid {
+    font-size: 32px;
+  }
+
+  .text-bot {
+    font-size: 16px;
+  }
+
+  .name-title,
+  .teacher-title {
+    font-size: 22px;
+  }
+
+  .bottom-content .name li,
+  .teacher-name,
+  .subject-text {
+    font-size: 14px;
+  }
 }
