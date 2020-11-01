@@ -1,25 +1,24 @@
-import { useRef } from 'react'
-import './App.css'
+import { useRef } from "react";
+import "./App.css";
 
-const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
 function App() {
-  const topRef = useRef(null)
-  const midRef = useRef(null)
-  const botRef = useRef(null)
-  // const pdfURL = "https://www.example.com/test.pdf"
+  const topRef = useRef(null);
+  const midRef = useRef(null);
+  const botRef = useRef(null);
 
   function executeScroll(pos) {
-    if (pos === 0) scrollToRef(topRef)
-    else if (pos === 1) scrollToRef(midRef)
-    else if (pos === 2) scrollToRef(botRef)
+    if (pos === 0) scrollToRef(topRef);
+    else if (pos === 1) scrollToRef(midRef);
+    else if (pos === 2) scrollToRef(botRef);
   }
 
   return (
     <div className="App">
       <div className="navbar noselect">
         <div className="navbar-content">
-          <div className="title">เครื่องหมายการค้า</div>
+          <div className="title">เครื่องหมายการค้า™</div>
           <div className="links">
             <button onClick={() => executeScroll(0)}>แนะนำ</button>
             <button onClick={() => executeScroll(1)}>เนื้อหา</button>
@@ -38,8 +37,6 @@ function App() {
       <div className="mid" ref={midRef}>
         <div className="mid-content">
           {/* <h1 style={{ fontSize: "36px" }}>อ่าน</h1> */}
-          {/* <iframe className="book" src={"https://drive.google.com/viewerng/viewer?url=" + pdfURL + "&embedded=true"} width="400px" height="300px" /> */}
-          {/* <iframe className="book" title="book" src="https://drive.google.com/file/d/1_RVHBlmiYi4yj0XdZRswYdyhaG_RFQ6m/preview" /> */}
           <iframe
             title="book"
             className="book"
@@ -84,7 +81,7 @@ function App() {
         </button>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
