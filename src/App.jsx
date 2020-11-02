@@ -1,17 +1,17 @@
-import { useRef } from "react";
-import "./App.css";
+import { useRef } from 'react'
+import './App.css'
 
-const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
 
 function App() {
-  const topRef = useRef(null);
-  const midRef = useRef(null);
-  const botRef = useRef(null);
+  const topRef = useRef(null)
+  const midRef = useRef(null)
+  const botRef = useRef(null)
 
   function executeScroll(pos) {
-    if (pos === 0) scrollToRef(topRef);
-    else if (pos === 1) scrollToRef(midRef);
-    else if (pos === 2) scrollToRef(botRef);
+    if (pos === 0) scrollToRef(topRef)
+    else if (pos === 1) scrollToRef(midRef)
+    else if (pos === 2) scrollToRef(botRef)
   }
 
   return (
@@ -40,12 +40,29 @@ function App() {
           <iframe
             title="book"
             className="book"
-            src="https://online.fliphtml5.com/zqbjc/khxm/"
+            src="https://online.flippingbook.com/view/180787/"
             allowtransparency="true"
             seamless="seamless"
             scrolling="no"
             allowFullScreen
           ></iframe>
+          {/* <a
+            href=""
+            class="fbo-embed"
+            data-fbo-id="180787"
+            data-fbo-lightbox="yes"
+            data-fbo-width="740px"
+            data-fbo-height="480px"
+            data-fbo-version="1"
+            style={{maxWidth: '100%'}}
+          >
+            เครื่องหมายการค้า
+          </a>
+          <script
+            async
+            defer
+            src="https://online.flippingbook.com/EmbedScriptUrl.aspx?m=redir&hid=180787"
+          ></script> */}
         </div>
       </div>
       <div className="bottom" ref={botRef}>
@@ -81,7 +98,7 @@ function App() {
         </button>
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
