@@ -84,10 +84,15 @@ html {
   font-weight: bold;
 }
 
+.navbar-content .links {
+  display: flex;
+}
+
 .navbar-content .links button {
   outline: none;
   border: none;
   background: transparent;
+  min-width: 90px;
   margin: 0 10px;
   text-decoration: none;
   color: black;
