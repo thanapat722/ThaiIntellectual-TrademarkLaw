@@ -36,33 +36,15 @@ function App() {
       </div>
       <div className="mid" ref={midRef}>
         <div className="mid-content">
-          {/* <h1 style={{ fontSize: "36px" }}>อ่าน</h1> */}
           <iframe
             title="book"
             className="book"
-            src="https://online.flippingbook.com/view/180787/"
+            src="https://online.flippingbook.com/view/405183/"
             allowtransparency="true"
             seamless="seamless"
             scrolling="no"
             allowFullScreen
           ></iframe>
-          {/* <a
-            href=""
-            class="fbo-embed"
-            data-fbo-id="180787"
-            data-fbo-lightbox="yes"
-            data-fbo-width="740px"
-            data-fbo-height="480px"
-            data-fbo-version="1"
-            style={{maxWidth: '100%'}}
-          >
-            เครื่องหมายการค้า
-          </a>
-          <script
-            async
-            defer
-            src="https://online.flippingbook.com/EmbedScriptUrl.aspx?m=redir&hid=180787"
-          ></script> */}
         </div>
       </div>
       <div className="bottom" ref={botRef}>
